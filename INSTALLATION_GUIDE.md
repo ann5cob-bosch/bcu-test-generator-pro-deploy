@@ -1,4 +1,4 @@
-# BCU Test Generator Professional v1.0.0 - Installation Guide
+# BCU Test Generator Professional v1.2.0 - Installation Guide
 
 ## Overview
 BCU Test Generator Professional is a Visual Studio Code extension designed for BCU (Build Configuration Utility) project management and AI-powered test case generation. This guide provides step-by-step installation instructions and prerequisites.
@@ -44,7 +44,7 @@ BCU Test Generator Professional is a Visual Studio Code extension designed for B
 
 1. **Download the Package**
    ```
-   Package: bcu-test-generator-pro-1.0.0.vsix
+   Package: bcu-test-generator-pro.vsix
    Size: 337.42KB
    ```
 
@@ -56,14 +56,14 @@ BCU Test Generator Professional is a Visual Studio Code extension designed for B
    - Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
    - Type: `Extensions: Install from VSIX...`
    - Select the command and click
-   - Browse to `bcu-test-generator-pro-1.0.0.vsix`
+   - Browse to `bcu-test-generator-pro.vsix`
    - Click "Install"
 
 4. **Alternative Installation Method**
    - Go to Extensions view (`Ctrl+Shift+X`)
    - Click the "..." menu (More Actions)
    - Select "Install from VSIX..."
-   - Choose the `bcu-test-generator-pro-1.0.0.vsix` file
+   - Choose the `bcu-test-generator-pro.vsix` file
 
 5. **Reload VS Code**
    - When prompted, click "Reload" or restart VS Code
@@ -74,10 +74,10 @@ BCU Test Generator Professional is a Visual Studio Code extension designed for B
 1. **Extract Package Contents**
    ```bash
    # Create extension directory
-   mkdir ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.0.0
+   mkdir ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.2.0
    
    # Extract VSIX contents
-   unzip bcu-test-generator-pro-1.0.0.vsix -d ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.0.0
+   unzip bcu-test-generator-pro.vsix -d ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.2.0
    ```
 
 2. **Restart VS Code**
@@ -206,7 +206,7 @@ After installation, verify these features work:
 
 ### Extension Information
 - **Name**: BCU Test Generator Professional
-- **Version**: 1.0.0
+- **Version**: 1.2.0
 - **Publisher**: bcu-tools
 - **License**: Bosch Global Software Technologies
 - **Author**: Andrew Nelson (MS/ESS12-PS)

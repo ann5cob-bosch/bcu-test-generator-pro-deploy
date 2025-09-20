@@ -1,15 +1,15 @@
-# BCU Test Generator Professional v1.0.0
+# BCU Test Generator Professional v1.2.0
 
 > **Next-generation BCU project management and AI-powered test case generation toolkit for Visual Studio Code**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/bcu-tools/bcu-test-generator-pro)
-[![License](https://img.shields.io/badge/license-Bosch%20Global%20Software%20Technologies-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://github.com/ann5cob-bosch/bcu-test-generator-pro-deploy)
+[![License](https://img.shields.io/badge/license-BGSW-green.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-1.74.0%2B-brightgreen.svg)](https://code.visualstudio.com/)
 
 ## 🚀 Quick Installation
 
 ### Download and Install
-1. **Download**: [bcu-test-generator-pro-1.0.0.vsix](./bcu-test-generator-pro-1.0.0.vsix) (338KB)
+1. **Download**: [bcu-test-generator-pro.vsix](./bcu-test-generator-pro.vsix) (292KB)
 2. **Install**: Open VS Code → Extensions → "..." → Install from VSIX
 3. **Reload**: Restart VS Code when prompted
 4. **Access**: Click the rocket icon 🚀 in the Activity Bar
@@ -140,7 +140,7 @@ This extension is production-ready and has been thoroughly tested for enterprise
 **Download now and transform your BCU testing workflow!** 🚀
 
 ---
-*Last updated: September 5, 2025 | Version: 1.0.0*
+*Last updated: September 20, 2025 | Version: 1.2.0*
 │   │   └── ⚙️ Dsmad_Clear
 │   ├── 🤖 Generate Test Cases for Dsmad_Init
 │   └── 🧠 AI Assistant Ready
