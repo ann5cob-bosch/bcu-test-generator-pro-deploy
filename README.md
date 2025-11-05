@@ -1,8 +1,8 @@
-# BCU Test Generator Professional v1.2.0
+# BCU Test Generator Professional v1.5.0
 
-> **Next-generation BCU project management and AI-powered test case generation toolkit for Visual Studio Code**
+**Next-generation BCU project management and AI-powered test case generation toolkit**
 
-[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://github.com/ann5cob-bosch/bcu-test-generator-pro-deploy)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue.svg)](https://github.com/ann5cob-bosch/bcu-test-generator-pro-deploy)
 [![License](https://img.shields.io/badge/license-BGSW-green.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-1.74.0%2B-brightgreen.svg)](https://code.visualstudio.com/)
 
@@ -18,6 +18,7 @@
 - Visual Studio Code 1.74.0+
 - BCU Framework installed and accessible
 - Workspace with `.bcuproj` files
+- **Node.js NOT required** - Extension is pre-compiled and ready to use
 
 ## ✨ Key Features
 
@@ -97,8 +98,9 @@
 
 ### � **Package Information**
 - **Extension Name**: BCU Test Generator Professional
-- **Package Size**: 338.02KB
-- **File Count**: 52 files
+- **Version**: 1.5.0
+- **Package Size**: ~395KB (optimized)
+- **File Count**: 109 files
 - **Supported Platforms**: Windows, Linux, macOS
 
 ### 🔧 **Technology Stack**
@@ -140,7 +142,9 @@ This extension is production-ready and has been thoroughly tested for enterprise
 **Download now and transform your BCU testing workflow!** 🚀
 
 ---
-*Last updated: September 20, 2025 | Version: 1.2.0*
+---
+
+*Last updated: November 5, 2025 | Version: 1.5.0*
 │   │   └── ⚙️ Dsmad_Clear
 │   ├── 🤖 Generate Test Cases for Dsmad_Init
 │   └── 🧠 AI Assistant Ready
@@ -164,14 +168,26 @@ This extension is production-ready and has been thoroughly tested for enterprise
 
 ## 🚀 **Getting Started**
 
-### **Prerequisites**
+### **Prerequisites (For Regular Users)**
 - ✅ Visual Studio Code 1.74.0+
-- ✅ Node.js and npm installed
 - ✅ BCU project with `.bcuproj` files
 - ✅ C source files for analysis
+- ❌ **Node.js NOT required** - Extension is pre-compiled
 
-### **Installation**
-1. Clone or download the extension
+### **Prerequisites (For Developers Only)**
+- ✅ Visual Studio Code 1.74.0+
+- ✅ Node.js and npm installed (for building from source)
+- ✅ TypeScript development environment
+
+### **Installation (For Regular Users)**
+1. Install the VSIX file via VS Code:
+   - Method 1: `Ctrl+Shift+P` → "Extensions: Install from VSIX..."
+   - Method 2: Command line: `code --install-extension bcu-test-generator-pro.vsix`
+2. Reload VS Code
+3. Click the rocket icon 🚀 in Activity Bar
+
+### **Installation (For Developers Only)**
+1. Clone or download the extension source code
 2. Install dependencies: `npm install`
 3. Compile: `npm run compile`
 4. Press `F5` to launch Extension Development Host
@@ -315,9 +331,35 @@ We welcome contributions to make BCU Test Generator Pro even more amazing!
 
 ## Setup Instructions
 
-⚠️ **Prerequisites**: This extension requires Node.js and npm to be installed.
+### For Regular Users (Installing the Extension)
 
-### Installation Steps
+✅ **No Prerequisites Required** - The extension is pre-compiled and ready to use. Node.js is NOT needed!
+
+**Installation Steps:**
+
+1. **Download the Extension**
+   - Get the `bcu-test-generator-pro.vsix` file
+
+2. **Install in VS Code**
+   - Method 1: Via UI
+     - Open VS Code
+     - Press `Ctrl+Shift+P`
+     - Type "Extensions: Install from VSIX..."
+     - Select the VSIX file
+   
+   - Method 2: Via Command Line
+     ```bash
+     code --install-extension bcu-test-generator-pro.vsix
+     ```
+
+3. **Reload VS Code**
+   - The extension is now ready to use!
+
+### For Developers (Building from Source)
+
+⚠️ **Prerequisites**: Node.js and npm are required ONLY for development.
+
+**Installation Steps:**
 
 1. **Install Node.js**
    - Download and install Node.js from [https://nodejs.org/](https://nodejs.org/)
@@ -339,10 +381,17 @@ We welcome contributions to make BCU Test Generator Pro even more amazing!
 
 ## Requirements
 
+### For Regular Users
 - Visual Studio Code 1.74.0 or higher
+- BCU Framework installed
+- **Node.js NOT required**
+
+### For Developers
+- Visual Studio Code 1.74.0 or higher
+- Node.js and npm (for building from source)
 - BCU project with `.bcuproj` files
 - C source files for function parsing
-- Template folder with `BCU_TestCase_Generation_Prompt.md`
+- Template folder with BCU test case templates
 
 ## Extension Structure
 

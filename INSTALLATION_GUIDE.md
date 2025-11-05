@@ -1,4 +1,4 @@
-# BCU Test Generator Professional v1.2.0 - Installation Guide
+# BCU Test Generator Professional v1.5.0 - Installation Guide
 
 ## Overview
 BCU Test Generator Professional is a Visual Studio Code extension designed for BCU (Build Configuration Utility) project management and AI-powered test case generation. This guide provides step-by-step installation instructions and prerequisites.
@@ -18,15 +18,25 @@ BCU Test Generator Professional is a Visual Studio Code extension designed for B
 - **Download**: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - **Installation**: Follow the standard VS Code installation process
 
-#### Node.js (Optional - for development)
-- **Version**: 16.x or higher
-- **Download**: [https://nodejs.org/](https://nodejs.org/)
-- **Purpose**: Required only if you plan to modify or contribute to the extension
-
 #### BCU Framework
 - **Requirement**: BCU (Build Configuration Utility) must be installed and accessible
 - **Verify Installation**: Ensure `bcu.cmd` or `bcu` command is available in your system PATH
 - **Project Files**: You should have access to `.bcuproj` files
+
+### 3. Development Requirements (Optional)
+
+**⚠️ Note: The following are ONLY required for extension development, NOT for using the extension!**
+
+#### Node.js (Development Only)
+- **Version**: 16.x or higher
+- **Download**: [https://nodejs.org/](https://nodejs.org/)
+- **Purpose**: Required ONLY if you plan to:
+  - Modify the extension source code
+  - Build the extension from TypeScript sources
+  - Contribute to extension development
+  - Package the extension yourself
+
+**For regular users:** You do NOT need to install Node.js to use this extension. The extension is pre-compiled and ready to use.
 
 #### Python (Optional - for advanced features)
 - **Version**: 3.8 or higher
@@ -74,10 +84,10 @@ BCU Test Generator Professional is a Visual Studio Code extension designed for B
 1. **Extract Package Contents**
    ```bash
    # Create extension directory
-   mkdir ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.2.0
+   mkdir ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.5.0
    
    # Extract VSIX contents
-   unzip bcu-test-generator-pro.vsix -d ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.2.0
+   unzip bcu-test-generator-pro.vsix -d ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.5.0
    ```
 
 2. **Restart VS Code**
@@ -206,7 +216,9 @@ After installation, verify these features work:
 
 ### Extension Information
 - **Name**: BCU Test Generator Professional
-- **Version**: 1.2.0
+- **Version**: 1.5.0
+- **Package Size**: ~395KB
+- **File Count**: 109 files
 - **Publisher**: bcu-tools
 - **License**: Bosch Global Software Technologies
 - **Author**: Andrew Nelson (MS/ESS12-PS)
