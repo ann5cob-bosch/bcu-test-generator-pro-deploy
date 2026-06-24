@@ -1,240 +1,383 @@
-# BCU Test Generator Professional v1.5.0 - Installation Guide
+# BCU Test Generator Professional v1.6.0 - Installation Guide
 
-## Overview
-BCU Test Generator Professional is a Visual Studio Code extension designed for BCU (Build Configuration Utility) project management and AI-powered test case generation. This guide provides step-by-step installation instructions and prerequisites.
-
-## Prerequisites
-
-### 1. System Requirements
-- **Operating System**: Windows 10/11 (primary support), Linux, macOS
-- **Memory**: Minimum 4GB RAM, Recommended 8GB+
-- **Storage**: At least 500MB free space
-- **Network**: Internet connection for extension marketplace access
-
-### 2. Required Software
-
-#### Visual Studio Code
-- **Version**: 1.74.0 or higher
-- **Download**: [https://code.visualstudio.com/](https://code.visualstudio.com/)
-- **Installation**: Follow the standard VS Code installation process
-
-#### BCU Framework
-- **Requirement**: BCU (Build Configuration Utility) must be installed and accessible
-- **Verify Installation**: Ensure `bcu.cmd` or `bcu` command is available in your system PATH
-- **Project Files**: You should have access to `.bcuproj` files
-
-### 3. Development Requirements (Optional)
-
-**⚠️ Note: The following are ONLY required for extension development, NOT for using the extension!**
-
-#### Node.js (Development Only)
-- **Version**: 16.x or higher
-- **Download**: [https://nodejs.org/](https://nodejs.org/)
-- **Purpose**: Required ONLY if you plan to:
-  - Modify the extension source code
-  - Build the extension from TypeScript sources
-  - Contribute to extension development
-  - Package the extension yourself
-
-**For regular users:** You do NOT need to install Node.js to use this extension. The extension is pre-compiled and ready to use.
-
-#### Python (Optional - for advanced features)
-- **Version**: 3.8 or higher
-- **Purpose**: Required for AI-powered test case generation features
-- **Packages**: `requirements.txt` included in extension for automatic setup
-
-### 3. Workspace Requirements
-- **BCU Project**: At least one valid `.bcuproj` file in your workspace
-- **Source Files**: C/C++ source files linked to your BCU project
-- **Test Cases**: Existing test case files (optional, can be generated)
-
-## Installation Methods
-
-### Method 1: Install from VSIX Package (Recommended)
-
-1. **Download the Package**
-   ```
-   Package: bcu-test-generator-pro.vsix
-   Size: 337.42KB
-   ```
-
-2. **Open Visual Studio Code**
-   - Launch VS Code
-   - Ensure you have the latest version (1.74.0+)
-
-3. **Install from VSIX**
-   - Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-   - Type: `Extensions: Install from VSIX...`
-   - Select the command and click
-   - Browse to `bcu-test-generator-pro.vsix`
-   - Click "Install"
-
-4. **Alternative Installation Method**
-   - Go to Extensions view (`Ctrl+Shift+X`)
-   - Click the "..." menu (More Actions)
-   - Select "Install from VSIX..."
-   - Choose the `bcu-test-generator-pro.vsix` file
-
-5. **Reload VS Code**
-   - When prompted, click "Reload" or restart VS Code
-   - The extension will be activated automatically
-
-### Method 2: Manual Installation (Advanced Users)
-
-1. **Extract Package Contents**
-   ```bash
-   # Create extension directory
-   mkdir ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.5.0
-   
-   # Extract VSIX contents
-   unzip bcu-test-generator-pro.vsix -d ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-1.5.0
-   ```
-
-2. **Restart VS Code**
-   - Close all VS Code instances
-   - Reopen VS Code to load the extension
-
-## Post-Installation Setup
-
-### 1. Verify Installation
-- Open Command Palette (`Ctrl+Shift+P`)
-- Type: `BCU Pro` - you should see BCU Test Generator commands
-- Check Activity Bar for the rocket icon (🚀)
-
-### 2. Configure BCU Path (if needed)
-- Open VS Code Settings (`Ctrl+,`)
-- Search for "BCU"
-- Set the correct path to your BCU installation
-
-### 3. Open a BCU Project
-- Open a workspace containing `.bcuproj` files
-- The extension will automatically detect BCU projects
-- Click the BCU Test Generator icon in the Activity Bar
-
-### 4. Access the Dashboard
-- Use Command Palette: `BCU Pro: Open BCU Test Generator Dashboard`
-- Or click the rocket icon in the Activity Bar
-- The webview dashboard should open with project information
-
-## Feature Activation
-
-### Core Features (Available Immediately)
-- ✅ BCU Project Detection
-- ✅ Source File Analysis
-- ✅ Function Detection
-- ✅ Webview Dashboard
-- ✅ Execution Controls with Toggle Options
-
-### Advanced Features (Require Setup)
-- **AI Test Generation**: Requires Python installation
-- **Coverage Analysis**: Requires BCU framework with coverage support
-- **Real-time Execution**: Requires valid BCU project configuration
-
-## Troubleshooting
-
-### Common Installation Issues
-
-#### Extension Not Loading
-```
-Problem: Extension doesn't appear after installation
-Solution: 
-1. Restart VS Code completely
-2. Check Extensions view to confirm installation
-3. Look for error messages in Developer Console (Help > Toggle Developer Tools)
-```
-
-#### BCU Commands Not Found
-```
-Problem: BCU-related commands don't appear
-Solution:
-1. Ensure you have a .bcuproj file in your workspace
-2. Verify BCU framework is installed
-3. Check VS Code Output panel for BCU Test Generator logs
-```
-
-#### Dashboard Not Opening
-```
-Problem: Webview dashboard fails to load
-Solution:
-1. Check VS Code version (must be 1.74.0+)
-2. Try reloading the window (Ctrl+R)
-3. Check browser settings if using VS Code in browser
-```
-
-#### Function Detection Issues
-```
-Problem: C functions not detected properly
-Solution:
-1. Ensure source files are in the correct directory structure
-2. Check file extensions (.c, .h)
-3. Use the "Detect and Add Source Files" command
-```
-
-### Performance Issues
-
-#### Slow Function Scanning
-```
-Solution:
-1. Use incremental scanning (enabled by default)
-2. Exclude large directories from workspace
-3. Increase VS Code memory allocation if needed
-```
-
-#### Large Project Handling
-```
-Solution:
-1. Enable background scanning
-2. Use manual refresh instead of auto-refresh
-3. Close unnecessary files/tabs
-```
-
-## Verification Checklist
-
-After installation, verify these features work:
-
-- [ ] Extension appears in Extensions list
-- [ ] BCU Test Generator icon visible in Activity Bar
-- [ ] Command Palette shows "BCU Pro" commands
-- [ ] Dashboard opens without errors
-- [ ] BCU projects are detected automatically
-- [ ] Source files can be browsed
-- [ ] Functions are detected and listed
-- [ ] Toggle buttons work in execution tab
-- [ ] Test execution can be initiated (with valid BCU setup)
-
-## Support and Documentation
-
-### Getting Help
-- **Issues**: Report problems at [GitHub Issues](https://github.com/bcu-tools/bcu-test-generator-pro/issues)
-- **Documentation**: See README.md for detailed usage instructions
-- **Updates**: Check VS Code Extensions for updates
-
-### Additional Resources
-- **BCU Framework Documentation**: Refer to your BCU installation guide
-- **Python Setup**: See `python-tools/requirements.txt` for Python dependencies
-- **Templates**: Located in `templates/` directory for test case generation
-
-### Extension Information
-- **Name**: BCU Test Generator Professional
-- **Version**: 1.5.0
-- **Package Size**: ~395KB
-- **File Count**: 109 files
-- **Publisher**: bcu-tools
-- **License**: Bosch Global Software Technologies
-- **Author**: Andrew Nelson (MS/ESS12-PS)
+**Last Updated:** June 23, 2026  
+**Version:** 1.6.0  
+**Status:** ✅ Production Ready
 
 ---
 
-## Quick Start
+## 📋 Table of Contents
 
-Once installed:
+1. [Prerequisites](#prerequisites)
+2. [Installation Methods](#installation-methods)
+3. [Verification](#verification)
+4. [First Steps](#first-steps)
+5. [Troubleshooting](#troubleshooting)
+6. [Uninstallation](#uninstallation)
 
-1. **Open Workspace** with `.bcuproj` files
-2. **Click BCU Icon** (🚀) in Activity Bar
-3. **Open Dashboard** for project overview
-4. **Configure Toggles** for execution preferences
-5. **Execute Tests** with real-time monitoring
+---
 
-**Status**: ✅ Ready for Production Use
+## Prerequisites
 
-For detailed usage instructions, see the main README.md file.
+### For End Users
+
+- **Visual Studio Code**: Version 1.74.0 or higher
+- **BCU Framework**: Installed and configured in your environment
+- **Workspace**: Containing `.bcuproj` files to manage
+- **Storage**: ~50MB for extension and dependencies
+
+**Note:** Node.js is NOT required - the extension is pre-compiled and ready to use.
+
+### For Developers
+
+- **Visual Studio Code**: Version 1.74.0 or higher
+- **Node.js**: Version 16.x or higher
+- **npm**: Version 7.x or higher (comes with Node.js)
+- **Git**: For version control (optional)
+- **TypeScript**: Understanding of TypeScript helpful for contributions
+
+### System Requirements
+
+- **OS**: Windows, macOS, or Linux
+- **RAM**: Minimum 2GB (4GB recommended for large projects)
+- **Disk Space**: ~100MB for full development setup
+
+---
+
+## Installation Methods
+
+### Method 1: Install from VS Code Extensions Marketplace (Recommended)
+
+1. Open **VS Code**
+2. Navigate to **Extensions** (Ctrl+Shift+X / Cmd+Shift+X)
+3. Search for **"BCU Test Generator Professional"**
+4. Click **Install** button
+5. Wait for installation to complete
+6. **Reload VS Code** when prompted (or manually with Ctrl+R)
+
+### Method 2: Manual Installation from VSIX File
+
+#### Step 1: Download the Extension
+
+Download the latest `.vsix` file:
+- **Latest Release**: `bcu-test-generator-pro-1.6.0.vsix`
+- **Location**: [Releases Page](https://github.boschdevcloud.com/ANN5COB/bcu-test-generator-pro/releases)
+
+#### Step 2: Install via VS Code UI
+
+1. Open **VS Code**
+2. Open **Extensions** (Ctrl+Shift+X / Cmd+Shift+X)
+3. Click the **"..."** menu (top-right of Extensions panel)
+4. Select **"Install from VSIX..."**
+5. Navigate to and select the downloaded `.vsix` file
+6. Click **Install**
+7. **Reload VS Code** when prompted
+
+#### Step 3: Verify Installation
+
+Check that the extension appears in your Extensions list and shows as "Installed".
+
+### Method 3: Command Line Installation
+
+#### Windows PowerShell
+
+```powershell
+# Navigate to the extension directory
+cd "C:\path\to\BCUTestGenTool_VSCodeExtn"
+
+# Install the extension
+code --install-extension "./bcu-test-generator-pro-1.6.0.vsix"
+```
+
+#### macOS / Linux Terminal
+
+```bash
+# Navigate to the extension directory
+cd /path/to/BCUTestGenTool_VSCodeExtn
+
+# Install the extension
+code --install-extension "./bcu-test-generator-pro-1.6.0.vsix"
+```
+
+### Method 4: Build from Source
+
+#### Prerequisites
+- Node.js 16.x or higher
+- npm 7.x or higher
+- Git
+
+#### Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.boschdevcloud.com/ANN5COB/bcu-test-generator-pro.git
+cd BCUTestGenTool_VSCodeExtn
+
+# 2. Install dependencies
+npm install
+
+# 3. Compile TypeScript
+npm run compile
+
+# 4. Package the extension
+npm run package
+# or install vsce first: npm install -g @vscode/vsce
+# then: vsce package
+
+# 5. Install the generated VSIX
+code --install-extension bcu-test-generator-pro-1.6.0.vsix
+```
+
+---
+
+## Verification
+
+### Verify Installation Success
+
+1. **Check Extensions List**
+   - Open Extensions (Ctrl+Shift+X)
+   - Search for "BCU Test Generator Professional"
+   - Should show as **Installed** (not "Install" button)
+   - Version should be **1.6.0**
+
+2. **Check Activity Bar**
+   - Look for the **BCU icon** (🚀) in the VS Code Activity Bar (left sidebar)
+   - Click to open the BCU Test Generator panel
+
+3. **Verify Activation**
+   - Open a workspace containing `.bcuproj` files
+   - Wait 2-3 seconds for extension to activate
+   - You should see the BCU tree view populate with projects
+
+### Verify BCU Framework Setup
+
+1. Open terminal in VS Code (Ctrl+`)
+2. Test BCU command availability:
+
+```bash
+# Windows
+bcu --version
+
+# macOS / Linux
+bcu --version
+```
+
+3. Should return BCU version information (e.g., "BCU 2.5.1")
+
+---
+
+## First Steps
+
+### Initial Setup Workflow
+
+1. **Open BCU Project Workspace**
+   ```
+   File → Open Folder → Select folder containing .bcuproj files
+   ```
+
+2. **Activate Extension**
+   ```
+   Wait 2-3 seconds for extension to activate
+   OR click BCU icon (🚀) in Activity Bar
+   ```
+
+3. **Browse Projects**
+   ```
+   In BCU Test Generator panel → Right-click → "Refresh"
+   OR use "Browse BCU Project" command
+   ```
+
+4. **Select Project**
+   ```
+   Click on project in tree view
+   Extension automatically detects source files
+   ```
+
+5. **Start Test Generation**
+   ```
+   Select a function → "Generate AI Test Cases"
+   Review generated templates
+   Execute tests with the dashboard
+   ```
+
+### Configuration (Optional)
+
+Create or edit workspace settings in `.vscode/settings.json`:
+
+```json
+{
+  "bcuTestGenerator.backgroundValidation": true,
+  "bcuTestGenerator.debugMode": false,
+  "bcuTestGenerator.maxFileSize": 1048576,
+  "bcuTestGenerator.templatePath": "./templates"
+}
+```
+
+**Configuration Options:**
+
+| Setting | Type | Default | Description |
+|---------|------|---------|-------------|
+| `backgroundValidation` | boolean | true | Enable background BCU project validation |
+| `debugMode` | boolean | false | Enable debug logging in output |
+| `maxFileSize` | number | 1048576 | Maximum file size for parsing (bytes) |
+| `templatePath` | string | "./templates" | Path to custom templates (relative to workspace) |
+
+---
+
+## Troubleshooting
+
+### Extension Won't Install
+
+**Problem:** Installation fails with error message
+
+**Solutions:**
+1. Ensure VS Code is closed
+2. Download the VSIX file again (may be corrupted)
+3. Try installing from command line:
+   ```bash
+   code --install-extension bcu-test-generator-pro-1.6.0.vsix
+   ```
+4. Check VS Code version (must be 1.74.0 or higher)
+
+### Extension Won't Activate
+
+**Problem:** BCU icon doesn't appear in Activity Bar, no tree view shows
+
+**Solutions:**
+1. Ensure workspace contains `.bcuproj` files
+2. Reload VS Code (Ctrl+R / Cmd+R)
+3. Check VS Code output for errors:
+   - View → Output → Select "BCU Test Generator" from dropdown
+4. Restart VS Code completely
+5. Uninstall and reinstall extension
+
+### BCU Command Not Found
+
+**Problem:** Extension says "BCU not found" or "bcu command not recognized"
+
+**Solutions:**
+1. Verify BCU is installed:
+   ```bash
+   bcu --version
+   ```
+2. Check BCU is in system PATH:
+   - Windows: System Properties → Environment Variables → PATH
+   - macOS/Linux: Check `$PATH` contains BCU bin directory
+3. Restart VS Code after fixing PATH
+4. Verify BCU version (must be compatible - typically 2.5.0 or higher)
+
+### Projects Not Detected
+
+**Problem:** No projects appear in tree view even with .bcuproj files present
+
+**Solutions:**
+1. Refresh the view:
+   - Right-click in BCU tree → "Refresh"
+   - Or press F5 with tree view focused
+2. Verify .bcuproj files exist in workspace
+3. Check file permissions (must be readable)
+4. Try closing and reopening the workspace
+5. Check output for parsing errors (View → Output)
+
+### Performance Issues
+
+**Problem:** Extension slow, UI laggy, or high memory usage
+
+**Solutions:**
+1. Disable background validation (temporarily):
+   ```json
+   "bcuTestGenerator.backgroundValidation": false
+   ```
+2. Increase file size limit to skip large files:
+   ```json
+   "bcuTestGenerator.maxFileSize": 2097152
+   ```
+3. Close other VS Code extensions
+4. Check available disk space
+5. Restart VS Code
+
+### Network Connectivity Issues
+
+**Problem:** Extension shows network error or can't connect
+
+**Solutions:**
+1. This is non-critical for core functionality
+2. Extension operates offline (network is optional)
+3. Check internet connection
+4. Try toggling internet and restarting extension
+5. Network errors are logged but don't prevent operation
+
+---
+
+## Uninstallation
+
+### Remove via VS Code UI
+
+1. Open **Extensions** (Ctrl+Shift+X / Cmd+Shift+X)
+2. Search for **"BCU Test Generator Professional"**
+3. Click **Uninstall** button
+4. **Reload VS Code** when prompted
+
+### Remove via Command Line
+
+```bash
+code --uninstall-extension bcu-tools.bcu-test-generator-pro
+```
+
+### Manual Removal (Advanced)
+
+**Windows:**
+```powershell
+Remove-Item "$env:USERPROFILE\.vscode\extensions\bcu-tools.bcu-test-generator-pro-*" -Recurse
+```
+
+**macOS/Linux:**
+```bash
+rm -rf ~/.vscode/extensions/bcu-tools.bcu-test-generator-pro-*
+```
+
+---
+
+## Getting Help
+
+### Documentation
+- **Main Documentation**: See [README.md](./README.md)
+- **Changelog**: See [CHANGELOG.md](./CHANGELOG.md)
+- **Release Notes**: See [RELEASE_NOTES_v1.6.0.md](./RELEASE_NOTES_v1.6.0.md)
+
+### Support Channels
+- **Issues**: [GitHub Issues](https://github.boschdevcloud.com/ANN5COB/bcu-test-generator-pro/issues)
+- **Email**: [Support](mailto:andrew.nelson@bosch.com)
+- **Documentation**: [BCU Documentation](https://bosch-internal-docs.com/bcu/)
+
+### Reporting Bugs
+
+When reporting issues, please include:
+1. VS Code version (`Help → About`)
+2. Extension version (`Extensions → BCU Test Generator Pro → Details`)
+3. BCU version (`bcu --version`)
+4. Error message (copy from Output panel)
+5. Steps to reproduce
+
+---
+
+## Version History
+
+| Version | Release Date | Status |
+|---------|--------------|--------|
+| 1.6.0 | June 23, 2026 | ✅ Current (Production) |
+| 1.5.0 | November 5, 2025 | Archived |
+| 1.0.0 | 2024 | Legacy |
+
+---
+
+**Ready to get started?** 🚀
+
+1. [Install the extension](#installation-methods)
+2. [Verify installation](#verification)
+3. [Follow first steps](#first-steps)
+4. [Check README.md](./README.md) for usage documentation
+
+---
+
+*For the latest updates, visit [GitHub Repository](https://github.boschdevcloud.com/ANN5COB/bcu-test-generator-pro)*

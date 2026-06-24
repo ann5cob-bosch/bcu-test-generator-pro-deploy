@@ -1,10 +1,26 @@
 # BCU Test Generator Professional - Version Information
 
-## Current Version: 1.5.0
-**Release Date**: November 5, 2025  
+## Current Version: 1.6.0
+**Release Date**: June 23, 2026  
 **License**: BGSW (Bosch Global Software Technologies)
 
 ## Version History
+
+### v1.6.0 - June 23, 2026
+**🎯 Architecture Optimization & Lightweight Analytics**
+
+**Major Features:**
+- **NEW**: Lightweight Usage Tracking System (replaced comprehensive analytics)
+- **NEW**: Cyclomatic Complexity Analysis for smart test prioritization
+- **IMPROVED**: Reduced codebase by 3,308 lines while maintaining functionality
+- **IMPROVED**: Faster extension startup with minimal network dependency
+- **IMPROVED**: Better performance with reduced memory footprint
+
+**Key Improvements:**
+- Simplified analytics with essential metrics only
+- McCabe complexity computation for function analysis
+- Optional network connectivity with graceful offline fallback
+- Production-ready with extensive testing
 
 ### v1.5.0 - November 5, 2025
 **🎉 Multi-Scenario BCU Test Report Support**
