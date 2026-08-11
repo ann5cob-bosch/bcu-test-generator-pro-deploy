@@ -11,7 +11,7 @@
 
 **Release Contents:**
 - Updated extension package version to 1.7.0
-- Added the complete `bcu-test-generator-pro-1.7.0.vsix` artifact
+- Published the current `bcu-test-generator-pro.vsix` artifact
 - Includes lightweight usage tracking, cyclomatic complexity analysis, and test coverage updates
 
 ### v1.6.0 - June 23, 2026

@@ -1,6 +1,6 @@
-﻿# BCU Test Generator Professional v1.6.0 — Installation Guide
+﻿# BCU Test Generator Professional v1.7.0 — Installation Guide
 
-**Version:** 1.6.0 | **Released:** June 23, 2026 | **Status:** ✅ Production Ready
+**Version:** 1.7.0 | **Released:** August 10, 2026 | **Status:** ✅ Production Ready
 
 ---
 
@@ -20,7 +20,7 @@
 
 ### Option 1: Install from VSIX via VS Code UI (Recommended)
 
-1. Download [`bcu-test-generator-pro-1.6.0.vsix`](./bcu-test-generator-pro-1.6.0.vsix)
+1. Download [`bcu-test-generator-pro.vsix`](./bcu-test-generator-pro.vsix)
 2. Open **VS Code**
 3. Open **Extensions** panel (`Ctrl+Shift+X`)
 4. Click the **`...`** menu → **Install from VSIX...**
@@ -36,14 +36,14 @@
 ### Option 3: Install via Command Line
 
 ```bash
-code --install-extension bcu-test-generator-pro-1.6.0.vsix
+code --install-extension bcu-test-generator-pro.vsix
 ```
 
 ---
 
 ## Verify Installation
 
-1. Open **Extensions** (`Ctrl+Shift+X`) — look for **BCU Test Generator Professional** showing as *Installed*, version **1.6.0**
+1. Open **Extensions** (`Ctrl+Shift+X`) — look for **BCU Test Generator Professional** showing as *Installed*, version **1.7.0**
 2. Check the **Activity Bar** (left sidebar) for the 🚀 BCU icon
 3. Open a workspace containing `.bcuproj` files — the tree view should populate automatically
 
@@ -95,7 +95,7 @@ code --uninstall-extension bcu-tools.bcu-test-generator-pro
 | Field | Value |
 |-------|-------|
 | **Name** | BCU Test Generator Professional |
-| **Version** | 1.6.0 |
+| **Version** | 1.7.0 |
 | **Publisher** | bcu-tools |
 | **Author** | Andrew Nelson (MS/ESS12-PS) |
 | **Organization** | Bosch Global Software Technologies |

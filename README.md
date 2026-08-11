@@ -65,7 +65,7 @@
 
 ### Install from VSIX
 
-1. Download [`bcu-test-generator-pro-1.7.0.vsix`](./bcu-test-generator-pro-1.7.0.vsix)
+1. Download [`bcu-test-generator-pro.vsix`](./bcu-test-generator-pro.vsix)
 2. Open VS Code → **Extensions** (`Ctrl+Shift+X`)
 3. Click **`...`** → **Install from VSIX...**
 4. Select the downloaded file and click **Install**
@@ -74,7 +74,7 @@
 ### Install via Command Line
 
 ```bash
-code --install-extension bcu-test-generator-pro-1.7.0.vsix
+code --install-extension bcu-test-generator-pro.vsix
 ```
 
 ---
@@ -154,6 +154,10 @@ Add to your workspace `.vscode/settings.json`:
 ---
 
 ## 🔄 Changelog
+
+### v1.7.0 — August 10, 2026
+- **Deployment:** Published the current extension package as `bcu-test-generator-pro.vsix`
+- **Included:** Lightweight usage tracking, cyclomatic complexity analysis, and test coverage updates
 
 ### v1.6.0 — June 23, 2026
 - **New:** Lightweight usage tracking — faster startup, lower memory footprint

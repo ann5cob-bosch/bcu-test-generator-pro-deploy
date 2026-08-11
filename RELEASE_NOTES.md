@@ -1,4 +1,14 @@
-# BCU Test Generator Professional v1.6.0 - Release Notes
+# BCU Test Generator Professional - Release Notes
+
+## v1.7.0 - August 10, 2026
+
+**Status:** Stable Release
+
+This deployment release packages the current extension as [`bcu-test-generator-pro.vsix`](./bcu-test-generator-pro.vsix). It includes the lightweight usage tracking, cyclomatic complexity analysis, and test coverage updates introduced in the v1.6 release line.
+
+---
+
+## v1.6.0 - June 23, 2026
 
 **Release Date:** June 23, 2026  
 **Version:** 1.6.0  
@@ -234,12 +244,12 @@ Test infrastructure for validation and unit testing.
 
 ### Fresh Install
 ```bash
-code --install-extension bcu-test-generator-pro-1.6.0.vsix
+code --install-extension bcu-test-generator-pro.vsix
 ```
 
 ### Upgrade from v1.5.0
 1. Uninstall current version
-2. Install v1.6.0.vsix
+2. Install `bcu-test-generator-pro.vsix`
 3. Reload VS Code
 4. No configuration changes required
 
@@ -249,15 +259,9 @@ code --install-extension bcu-test-generator-pro-1.6.0.vsix
 
 ## 📦 Deployment Package
 
-**Package:** `bcu-test-generator-pro-1.6.0.vsix`
-- **Size:** 6.8 MB
-- **Files:** 241 files included
-- **Compression:** Optimized
+**Package:** [`bcu-test-generator-pro.vsix`](./bcu-test-generator-pro.vsix)
 
-**Download Location:**
-```
-c:\Workspace\Work\BoCSE\BCU-Test-Generator-Deploy\bcu-test-generator-pro-1.6.0.vsix
-```
+The repository publishes the current VSIX under this stable filename.
 
 ---
 
